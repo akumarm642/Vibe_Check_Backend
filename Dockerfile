@@ -24,7 +24,7 @@ COPY . .
 # This will typically output the compiled JavaScript files into a 'dist' folder.
 RUN npm run build
 
-# Stage 2: Run the Compiled Backend Application
+# Stage 2: Run the Compiled Backend Application in a Lightweight Container
 # This stage creates the final, smaller runtime container.
 # It only includes what's necessary to run the application, excluding build tools and devDependencies.
 FROM node:20-alpine AS backend_runtime
