@@ -37,6 +37,7 @@ WORKDIR /app
 COPY --from=backend_build /app/package.json /app/package-lock.json ./
 RUN npm ci --omit=dev
 
+#change1
 # Copy the compiled JavaScript files from the 'backend_build' stage.
 # This line assumes that 'npm run build' outputs your compiled JS to a 'dist' folder.
 # If your TypeScript compiler (tsc) outputs to a different directory (e.g., 'build'),
